@@ -1,0 +1,82 @@
+header {
+  grid-area: header; 
+  color: rgb(247, 80, 219);
+  font-family: 'times new roman';
+  padding: 1rem;
+  background: rgb(207, 207, 207);
+}
+figure figcaption{
+  font-family: Georgia;
+  font-size: 15px;
+}
+h2 {
+  color: purple;
+  font-family: 'Times New Roman';
+}
+main p {
+  font-family: Georgia;
+}
+aside p {
+  font-family: 'Times New Roman';
+  font-size: 14px;
+}
+nav a[aria-current="page"] {
+  pointer-events: none;
+  color: midnightblue;
+  cursor: default;
+}
+aside a[aria-current="page"] {
+  pointer-events: none;
+  color: midnightblue;
+  cursor: default;
+}
+a:link {
+  color: blue
+}
+a:visited {
+  color:blue
+}
+a:hover {
+  color: orangered
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr 250px; /* colonna principale + aside */
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "main aside";
+  gap: 20px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Posizionamento aree */
+nav { grid-area: nav; }
+main { grid-area: main; padding: 1rem; }
+aside { grid-area: aside; background: rgb(207, 207, 207); padding: 1rem; border-left: 3px solid #ccc; }
+footer {background: rgb(207, 207, 207);}
+/* Stile barra di navigazione */
+nav ul {
+  list-style: none; /* rimuove i pallini */
+  margin: 0;
+  padding: 0;
+  display: flex; /* orizzontale */
+  background: rgb(207, 207, 207);
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  display: block;
+  padding: 0.8rem 1.2rem;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: #666;
+}
